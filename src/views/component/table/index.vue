@@ -1,10 +1,10 @@
 <template>
   <div>
-    <n-card title="表格" class="h-full shadow-sm rounded-16px">
+    <n-card class="h-full shadow-sm rounded-16px">
       <n-space :vertical="true">
         <n-space>
-          <n-button @click="getDataSource">有数据</n-button>
-          <n-button @click="getEmptyDataSource">空数据</n-button>
+          <n-button @click="getDataSource">新增</n-button>
+          <n-button @click="getEmptyDataSource">展开折叠</n-button>
         </n-space>
         <loading-empty-wrapper class="h-480px" :loading="loading" :empty="empty">
           <n-data-table :columns="columns" :data="dataSource" :flex-height="true" class="h-480px" />
@@ -31,39 +31,39 @@ const { loading, startLoading, endLoading, empty, setEmpty } = useLoadingEmpty()
 
 const columns: DataTableColumn[] = [
   {
-    title: 'Name',
+    title: '菜单名称',
     key: 'name',
     align: 'center'
   },
   {
-    title: 'Age',
-    key: 'age',
+    title: '类型',
+    key: 'type',
     align: 'center'
   },
   {
-    title: 'Address',
-    key: 'address',
+    title: '图标',
+    key: 'icon',
     align: 'center'
   },
   {
-    key: 'action',
-    title: 'Action',
-    align: 'center',
-    render: () => {
-      return (
-        <NSpace justify={'center'}>
-          <NButton size={'small'} onClick={() => {}}>
-            编辑
-          </NButton>
-          <NPopconfirm onPositiveClick={() => {}}>
-            {{
-              default: () => '确认删除',
-              trigger: () => <NButton size={'small'}>删除</NButton>
-            }}
-          </NPopconfirm>
-        </NSpace>
-      );
-    }
+    title: '权限标识',
+    key: 'permissionID',
+    align: 'center'
+  },
+  {
+    title: '状态',
+    key: 'state',
+    align: 'center'
+  },
+  {
+    title: '排序',
+    key: 'sequence',
+    align: 'center'
+  },
+  {
+    title: '创建时间',
+    key: 'creation',
+    align: 'center'
   }
 ];
 
@@ -75,8 +75,12 @@ function createDataSource(): DataSource[] {
     .map((_item, index) => {
       return {
         name: `Name${index}`,
-        age: getRandomInteger(30, 20),
-        address: '中国'
+        icon: `icon${index}`,
+        type: `type${index}`,
+        permissionID: getRandomInteger(30, 20),
+        state: `state${index}`,
+        sequence: `sequence${index}`,
+        creation: `2002`
       };
     });
 }

@@ -55,8 +55,7 @@ const document: AuthRoute.Route = {
     }
   ],
   meta: {
-    title: '文档',
-    icon: 'mdi:file-document-multiple-outline',
+    title: '人员管理',
     order: 2
   }
 };

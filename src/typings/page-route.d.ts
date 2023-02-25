@@ -58,6 +58,7 @@ declare namespace PageRoute {
     | 'multi-menu_first_second-new_third'
     | 'multi-menu_first_second'
     | 'plugin'
+    | 'plugin2'
     | 'plugin_charts'
     | 'plugin_charts_antv'
     | 'plugin_charts_echarts'

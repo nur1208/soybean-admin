@@ -25,8 +25,8 @@ const dashboard: AuthRoute.Route = {
     }
   ],
   meta: {
-    title: '仪表盘',
-    icon: 'mdi:monitor-dashboard',
+    title: '工作台',
+    // icon: "mdi:monitor-dashboard",
     order: 1
   }
 };

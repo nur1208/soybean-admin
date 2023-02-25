@@ -3,11 +3,10 @@ const about1: AuthRoute.Route = {
   path: '/about',
   component: 'self',
   meta: {
-    title: '关于',
+    title: 'AR',
     requiresAuth: true,
     singleLayout: 'basic',
     permissions: ['super', 'admin', 'user'],
-    icon: 'fluent:book-information-24-regular',
     order: 10
   }
 };
