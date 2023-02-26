@@ -53,6 +53,7 @@ export function transformAuthRouteToVueRoute(item: AuthRoute.Route) {
         itemRoute.component = getViewComponent(item.name as AuthRoute.LastDegreeRouteKey);
       }
     };
+    // debugger;
     try {
       if (item.component) {
         action[item.component]();

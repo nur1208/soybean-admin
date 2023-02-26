@@ -58,7 +58,6 @@ declare namespace PageRoute {
     | 'multi-menu_first_second-new_third'
     | 'multi-menu_first_second'
     | 'plugin'
-    | 'plugin2'
     | 'plugin_charts'
     | 'plugin_charts_antv'
     | 'plugin_charts_echarts'
@@ -70,6 +69,7 @@ declare namespace PageRoute {
     | 'plugin_map'
     | 'plugin_print'
     | 'plugin_swiper'
+    | 'singlePipe_singleColumn'
     | 'plugin_video';
 
   /**
@@ -119,5 +119,6 @@ declare namespace PageRoute {
     | 'plugin_print'
     | 'plugin_swiper'
     | 'plugin_video'
+    | 'singlePipe_singleColumn'
   >;
 }

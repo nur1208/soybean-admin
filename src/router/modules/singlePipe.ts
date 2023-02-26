@@ -1,11 +1,11 @@
 const component: AuthRoute.Route = {
-  name: 'component',
-  path: '/component',
+  name: 'singlePipe',
+  path: '/singlePipe',
   component: 'basic',
   children: [
     {
-      name: 'component_table',
-      path: '/component/table',
+      name: 'singlePipe_singleColumn',
+      path: '/singlePipe/singleColumn',
       component: 'self',
       meta: {
         title: '单列表',

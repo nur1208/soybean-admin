@@ -1,6 +1,6 @@
 const plugin2: AuthRoute.Route = {
-  name: 'plugin2',
-  path: '/plugin2',
+  name: 'plugin',
+  path: '/plugin',
   component: 'basic',
   meta: {
     title: '万案配',
